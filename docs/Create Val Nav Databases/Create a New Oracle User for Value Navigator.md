@@ -1,0 +1,36 @@
+
+
+# Create a New Oracle User for Value Navigator
+
+Create a user named NEWUSER with a password of NEWUSER (the identified
+by portion of the create statement below). It is assumed that tablespace
+ENNAV_DATA exists. This can be replaced by the default tablespace name
+used in the local Oracle configuration.
+
+CREATE USER NEWUSER
+
+IDENTIFIED BY NEWUSER
+
+DEFAULT TABLESPACE ENNAV_DATA
+
+TEMPORARY TABLESPACE TEMP
+
+QUOTA UNLIMITED ON ENNAV_DATA;
+
+ 
+
+GRANT ALTER SESSION TO NEWUSER;
+
+GRANT CREATE SESSION TO NEWUSER;
+
+GRANT CREATE SEQUENCE TO NEWUSER;
+
+GRANT CREATE SYNONYM TO NEWUSER;
+
+GRANT CREATE TABLE TO NEWUSER;
+
+GRANT CREATE VIEW TO NEWUSER;
+
+GRANT CREATE PROCEDURE TO NEWUSER;
+
+GRANT CREATE TRIGGER TO NEWUSER;
